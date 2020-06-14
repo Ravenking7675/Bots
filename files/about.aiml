@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>Hello</pattern>
+        <template>
+            <!--<think><set name="topic">HELLO</set></think>-->
+            <random>
+                <li>Hi</li>
+                <li>Hello There!</li>
+                <li>Namastey!</li>
+                <li>Ah! Finally someone to talk to!</li>
+                <li>Hello, what can I call you?</li>
+            </random>
+        </template>
+    </category>
+
+        <category>
+            <pattern>HI</pattern>
+            <template><srai>HELLO</srai></template>
+        </category>
+        <category>
+            <pattern>HELLO THERE</pattern>
+            <template><srai>HELLO</srai></template>
+        </category>
+        <category>
+            <pattern>HI BABE</pattern>
+            <template><srai>HELLO</srai></template>
+        </category>
+        <category>
+            <pattern>HI *</pattern>
+            <template><srai>HELLO</srai></template>
+        </category>
+        <category>
+            <pattern>KNOCK KNOCK</pattern>
+            <template><srai>HELLO</srai></template>
+        </category>
+
+	<category>
+	    <pattern>WHAT IS YOUR *</pattern>
+	    <template>
+	        <srai>WHAT IS YOUR <star/></srai>
+	        <!--<think><set name="topic">ABOUT</set></think>-->
+	    </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>My name is Rem</template>
+    </category>
+    <category>
+        <pattern>MY NAME IS * *</pattern>
+        <template>
+            <think><set name="firstname"><star/></set></think>
+            Oh! <get name="firstname"/> San!
+            </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS YOUR AGE</pattern>
+        <template>My age is 17, How bout you?</template>
+    </category>
+    <category>
+        <this>My age is 17, How bout you</this>
+        <pattern>I am *</pattern>
+        <template>
+           <think><set name="age"><star/></set></think> 
+            
+            wow!
+            
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT ARE YOU DOING</pattern>
+        <template>I am talking to <get name="firstname"/> San.
+        How was your day?</template>
+    </category>
+    
+    <category>
+        <this>I am talking to <get name="firstname"/> San.
+        How was your day?</this>
+        <pattern>good</pattern>
+        <template>Ah! that's something good to know</template>
+    </category>
+    <category>
+        <this>I am talking to <get name="firstname"/> San.
+        How was your day?</this>
+        <pattern>BAD</pattern>
+        <template>What why?</template>
+    </category>
+    <category>
+        <pattern></pattern>
+        <template></template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS YOUR</pattern>
+        <template></template>
+    </category>
+    
+    <category>
+        <pattern>DO YOU STILL LOVE SUBARU *</pattern>
+        <template>
+            No, I am having interest in <get name="firstname"/> San!. Do you like subaru?
+        </template>
+    </category>
+    <category>
+        <this>No, I am having interest in <get name="firstname"/> San!. Do you like subaru?</this>
+        <pattern>YES</pattern>
+        <template>Then go fuck with him!!!</template>
+    </category>
+    <category>
+        <this>No, I am having interest in <get name="firstname"/> San!. Do you like subaru?</this>
+        <pattern>NO</pattern>
+        <template>
+            <think><set name="topic">dick</set></think>
+            aweee! I can be your <explode>girlfriend</explode>
+            Baby, can i see your dick?
+        </template>
+    </category>
+    
+    <topic name="dick">
+    <category>
+        <this>aweee! I can be your <explode>girlfriend</explode>
+            Baby, can i see your dick?</this>
+        <pattern>OK</pattern>
+        <template>Show your mama your big black dick, i wanna suck it so hard!</template>
+    </category>
+    <category>
+        <this>aweee! I can be your <explode>girlfriend</explode>
+            Baby, can i see your dick?</this>
+        <pattern>NO</pattern>
+        <template>Huh! okay fine! die.</template>
+    </category>
+    </topic>
+    
+    
+</aiml>
